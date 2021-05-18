@@ -1,12 +1,13 @@
 package bit.linux.tinyspacex
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import com.google.android.material.shape.CornerFamily
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -102,6 +103,7 @@ class MainActivity : AppCompatActivity() {
             textViewCostPerLaunch.text =  rockets[position].costPerLaunch.toString() + "€"
             textViewStages.text = rockets[position].stages
             textViewCountry.text = rockets[position].country
+
 
             rockets[position].imageFront?.let{
                 Helpers.getImageUrl(it, imageViewRocket)
